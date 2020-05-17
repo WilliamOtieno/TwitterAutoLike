@@ -7,18 +7,18 @@ import time
 #Access the Consumer api keys after creating an account in the Tweeter developers website
 
 #arguments are (API key, API scret key) in the consumer api keys
-auth = tweepy.OAuthHandler("ID3RfiTfCHHuwhkD2ZX9c97jD", "n2DhdVocJ25YIHDRDLZF0aMsv5r0iwyQmGXT00pIZsU3xYMtem") 
+auth = tweepy.OAuthHandler("T5dE0zyEkof0kCraAR8mXYO72", "TAF5dld2SqCgnCiE6f12vaOZKdRMLxE8fyFkt9l4Ypaua3z4cs")
 
  #arguments are (access token, access token secret) from the access token and access token secret  keys
-auth.set_access_token("935912368231546882-9vWa4Y5uq2WBZutsdRXVBLXCZnjkYKw", "eQBLAQ3yqk9upjDKYqoCngl9gvltUayzvjT0RqCL3olYJ")
+auth.set_access_token("935912368231546882-Zzv3tISnLzeusZc7huwU36nD9ftGtWH", "O4TpDDyZRGVJezNbtoF5x2zjaEZNZS8bSsKdCBghIzwst")
 
-#Access the API and set rate limits to True to avoid being banned 
+#Access the API and set rate limits to True to avoid being banned
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 user = api.me()
 
-#Keyword to use when searchinng for tweets to be liked 
-search = 'Python'
+#Keyword to use when searchinng for tweets to be liked
+search = '100DaysOfCode'
 numTweets = 500
 
 for tweet in tweepy.Cursor(api.search, search).items(numTweets):
